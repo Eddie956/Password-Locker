@@ -1,3 +1,4 @@
+import pyperclip
 class User:
 	"""
 	Class that generates new instance for the user
@@ -14,7 +15,7 @@ class User:
 		self.email = email
 		self.password = password
 
-	def save_user(self):
+	def save_account(self):
 		"""
 		save_user method saves user objects into user_list
 		"""
@@ -45,13 +46,14 @@ class Credential:
 				return credential
 
 	@classmethod
-	def credential_exist(cls,user_name):
+	def credential_exists(cls,user_name):
 		"""
 		method that checks if a username exists
 		"""
-		for credential in cls credential_list:
+		for credential in cls.credential_list:
 			if credential.user_name == user_name:
 				return True
+
 		return False
 
 
@@ -61,3 +63,8 @@ class Credential:
 		method that returns the credential list
 		"""
 		return cls.credential_list
+
+	@classmethod
+	def copy_email(cls,user_name):
+		credential_found = Credential.find_by_user_name(user_name)
+		pyperclip.copy(credential_found.email)
