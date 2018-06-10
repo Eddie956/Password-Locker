@@ -1,4 +1,6 @@
 import pyperclip
+import string
+import random 
 class User:
 	"""
 	Class that generates new instance for the user
@@ -26,7 +28,19 @@ class Credential:
 	credential_list = []
 	user_credential_list = []
 
-	def __init__(self,user_name,email,password):
+	@classmethod
+	def check_user(cls,first_name,password):
+		'''
+		Method that checks if the name and password entered match entries in the users_list
+		'''
+		current_user = ''
+		for user in User.users_list:
+			if (user.first_name == first_name and user.password == password):
+				current_user = user.first_name
+		return current_user
+
+
+	def __init__(self,user_name,email, acc, password):
 		self.user_name = user_name
 		self.email = email
 		self.password = password
@@ -34,8 +48,13 @@ class Credential:
 	def save_credential(self):
 		Credential.credential_list.append(self)#function that saves the credential list
 
+	def generate_password():
+		generate_password=  "".join(choice(characters) for x in range(randint(8, 16)))
+		return generate_password
+
 	def delete_credential(self):
 		Credential.credential_list.append(self)#function that delete the credential list
+
 
 
 	@classmethod
@@ -67,4 +86,4 @@ class Credential:
 	@classmethod
 	def copy_email(cls,user_name):
 		credential_found = Credential.find_by_user_name(user_name)
-		pyperclip.copy(credential_found.email)
+		return pyperclip.copy(credential_found.email)

@@ -14,9 +14,23 @@ def save_user(user):
 	'''
 	user.save_user()
 
+def verify_user(first_name,password):
+	'''
+	Function that verifies the existance of the user before creating credentials
+	'''
+	checking_user = Credential.check_user(first_name,password)
+	return checking_user
+
+def generate_password():
+	'''
+	Function to generate a password automatically
+	'''
+	generate_password = Credential.generate_password()
+	return generate_password
+
 from user import Credential
 
-def create_credential(user_name,email,password):
+def create_credential(user_name,email, acc, password):
 	'''
 	Function to create a new user
 	'''
@@ -28,12 +42,6 @@ def save_credential(credential):
 	function to save new credential
 	'''
 	credential.save_credential()
-
-def del_credential(credential):
-	'''
-	function to delete a credential
-	'''
-	credential.delete_credential()
 
 def find_credential(user_name):
 	''' 
@@ -47,23 +55,24 @@ def check_existing_credential(user_name):
 	'''
 	return Credential.credential_exist(user_name)
 	
-def display_credential():
+def display_credential(user_name):
 	'''
 	functions that returns all the saved credentials
 	'''
-	return Credential.display_credential()
+	return Credential.display_credential(user_name)
+
+def del_credential(credential):
+	'''
+	function to delete a credential
+	'''
+	credential.delete_credential()
+
 
 def copy_email():
 	'''
 	functions that returns all the email copied to the clipboard
 	'''
 	return Credential.copy_email()
-
-def generate_password():
-	'''
-	functions that generates anew password
-	'''
-	return Credential.generate_password()
 
 
 def main():
@@ -74,11 +83,11 @@ def main():
 	print('\n')
 
 	while True:
-		print("Use this short codes : cc - create anew account, lg - login to your account, fc - finding account by username, ex - exit the app")
+		print("Use this short codes : su - sign up, lg - login to your account, ex - exit the app")
 
 		short_code = input().lower()
 
-		if short_code == 'cc':
+		if short_code == 'su':
 			print("New Account")
 			print("-"*10)
 
@@ -88,34 +97,18 @@ def main():
 			print("Enter your last name....")
 			last_name = input()
 
-			print("Enter your user name....")
-			user_name = input ()
-
 			print("Enter your email....")
 			email = input()
 
 			print("Enter you password....")
 			password = input ()
-
-			print("Confirm your password....")
-			password = input ()
-
-			while password !=password:
-				print("Your password did not match please try again")
-				print("Enter you password....")
-				password = input ()
-
-				print("Confirm your password....")
-				password = input ()
-
-			save_user(create_user(first_name,last_name,user_name,email,password))
+				
+			save_account(create_user(first_name,last_name,email,password))
 			print('\n')
 			print(f"New User {first_name, last_name} account has been created")
 			print('\n')
 
 		elif short_code == 'lg':
-
-			if login():
 				print("Please enter your details to login")
 				print("\n")
 
@@ -128,16 +121,31 @@ def main():
 
 				print("Enter your password....")
 				password = input()
-
+				user_exists = verify_user(user_name,password)
 				if user_exists == user_name:
-					print(f"Welcome {user_name} you have successfully logedin password locker")
-					print("\n")
+				# while (username != "username" and password != "password")
+
+					print (" Sorry username and password incorrect please re-enter for validation ")
+					print("Enter your user name....")
+					user_name = input()
+					print('\n')
+
+					print("Enter your email....")
+					email = input()
+
+					print("Enter your password....")
+					password = input()
 
 				else:
-					print("user name or password is not recognized")
-					again = input("DO you want to try again ?(y/n):")
+					print ("Greetings," , {username}, "you are now logged in now with your password")
+				
+					again = input("Do you want to try again ?(y/n):")
+					print("Use this short codes : su - sign up, dc - display your account, ex - exit the app")
 					if again.lower() == 'n':
 						print('Goodbye')
+			# elif short_code == 'dc':
+			# 	print('\n')
+
 				
 		elif short_code == "ex":
 			print("Bye......")

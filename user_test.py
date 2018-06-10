@@ -22,11 +22,11 @@ class TestUser(unittest.TestCase):
 		self.assertEqual(self.new_user.email,"mutugieddie3@gmail.com")
 		self.assertEqual(self.new_user.password,"mango")
 
-	def test_save_user(self):
+	def test_save_account(self):
 		"""
 		test_save_user test case to test if the user object is saved into the user list
 		"""
-		self.new_user.save_user()#saving the new user
+		self.new_user.save_account()#saving the new user
 		self.assertEqual(len(User.user_list),1)
 
 class TestCredential(unittest.TestCase):
@@ -37,7 +37,7 @@ class TestCredential(unittest.TestCase):
 		"""
 		a setup method to run before each testcase
 		"""
-		self.new_credential = Credential("Arijm", "mutugieddie3@gmail.com", "mango")
+		self.new_credential = Credential("Arijm", "mutugieddie3@gmail.com", "instagram", "mango")
 
 	def test__init__(self):
 		"""
@@ -45,6 +45,7 @@ class TestCredential(unittest.TestCase):
 		"""
 		self.assertEqual(self.new_credential.user_name,"Arijm")
 		self.assertEqual(self.new_credential.email,"mutugieddie3@gmail.com")
+		self.assertEqual(self.new_credential.acc,"instagram")
 		self.assertEqual(self.new_credential.password,"mango")
 
 	def test_save_credential(self):
@@ -56,7 +57,7 @@ class TestCredential(unittest.TestCase):
 
 	def tearDown(self):
 		"""
-		it does clean up after each and evert test has run
+		it does clean up after each and every test has run
 		"""
 		Credential.credential_list = []
 		User.credential_list = []
@@ -91,7 +92,7 @@ class TestCredential(unittest.TestCase):
 		test to check if we can find a user by his name
 		"""
 		self.new_credential.save_credential()
-		test_credential = Credential("Arijm", "mutugieddie3@gmail.com", "mango")#new credential
+		test_credential = Credential("Arijm", "mutugieddie3@gmail.com", "instagram" "mango")#new credential
 		test_credential.save_credential()
 		found_credential = Credential.find_by_user_name("Arijm")
 		self.assertEqual(found_credential.user_name,test_credential.user_name)
