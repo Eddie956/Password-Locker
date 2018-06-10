@@ -61,11 +61,11 @@ def display_credential(user_name):
 	'''
 	return Credential.display_credential(user_name)
 
-# def del_credential(credential):
-# 	'''
-# 	function to delete a credential
-# 	'''
-# 	credential.delete_credential()
+def del_credential(credential):
+	'''
+	function to delete a credential
+	'''
+	credential.delete_credential()
 
 
 # def copy_email():
