@@ -68,11 +68,11 @@ def del_credential(credential):
 	credential.delete_credential()
 
 
-# def copy_email():
-# 	'''
-# 	functions that returns all the email copied to the clipboard
-# 	'''
-# 	return Credential.copy_email()
+def copy_email():
+	'''
+	functions that returns all the email copied to the clipboard
+	'''
+	return Credential.copy_email()
 
 
 # def main():
