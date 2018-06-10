@@ -37,17 +37,17 @@ def create_credential(user_name,email, acc, password):
 	new_credential = Credential(user_name,email,password)
 	return new_credential
 
-# def save_credential(credential):
-# 	'''
-# 	function to save new credential
-# 	'''
-# 	credential.save_credential()
+def save_credential(credential):
+	'''
+	function to save new credential
+	'''
+	credential.save_credential()
 
-# def find_credential(user_name):
-# 	''' 
-# 	function that finds a credential by username and returns the credential
-# 	'''
-# 	return Credential.find_by_user_name(user_name)
+def find_credential(user_name):
+	''' 
+	function that finds a credential by username and returns the credential
+	'''
+	return Credential.find_by_user_name(user_name)
 
 # def check_existing_credential(user_name):
 # 	'''
