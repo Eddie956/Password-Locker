@@ -57,33 +57,33 @@ class Credential:
 
 
 
-# 	@classmethod
-# 	def find_by_user_name(cls,user_name):
+	@classmethod
+	def find_by_user_name(cls,user_name):
 
-# 		for credential in cls.credential_list:
-# 			if credential.user_name == user_name:
-# 				return credential
+		for credential in cls.credential_list:
+			if credential.user_name == user_name:
+				return credential
 
-# 	@classmethod
-# 	def credential_exists(cls,user_name):
-# 		"""
-# 		method that checks if a username exists
-# 		"""
-# 		for credential in cls.credential_list:
-# 			if credential.user_name == user_name:
-# 				return True
+	@classmethod
+	def credential_exists(cls,user_name):
+		"""
+		method that checks if a username exists
+		"""
+		for credential in cls.credential_list:
+			if credential.user_name == user_name:
+				return True
 
-# 		return False
+		return False
 
 
-# 	@classmethod
-# 	def display_credential(cls):
-# 		"""
-# 		method that returns the credential list
-# 		"""
-# 		return cls.credential_list
+	@classmethod
+	def display_credential(cls):
+		"""
+		method that returns the credential list
+		"""
+		return cls.credential_list
 
-# 	@classmethod
-# 	def copy_email(cls,user_name):
-# 		credential_found = Credential.find_by_user_name(user_name)
-# 		return pyperclip.copy(credential_found.email)
+	@classmethod
+	def copy_email(cls,user_name):
+		credential_found = Credential.find_by_user_name(user_name)
+		return pyperclip.copy(credential_found.email)
