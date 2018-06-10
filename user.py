@@ -48,12 +48,12 @@ class Credential:
 	def save_credential(self):
 		Credential.credential_list.append(self)#function that saves the credential list
 
-# 	def generate_password():
-# 		generate_password=  "".join(choice(characters) for x in range(randint(8, 16)))
-# 		return generate_password
+	def generate_password():
+		generate_password=  "".join(choice(characters) for x in range(randint(8, 16)))
+		return generate_password
 
-# 	def delete_credential(self):
-# 		Credential.credential_list.append(self)#function that delete the credential list
+	def delete_credential(self):
+		Credential.credential_list.append(self)#function that delete the credential list
 
 
 
