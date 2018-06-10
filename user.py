@@ -34,10 +34,10 @@ class Credential:
 		Method that checks if the name and password entered match entries
 		'''
 		current_account = ''
-		for user in User.users_list:
+		for user in User.user_list:
 			if (user.first_name == first_name and user.password == password):
 				current_user = user.first_name
-		return current_user
+		return current_account
 
 
 	def __init__(self,user_name,email, acc, password):

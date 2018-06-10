@@ -1,20 +1,20 @@
 #!/usr/bin/env python3.6
 from user import User
 
-def create_user(first_name,last_name,email,password):
+def create_account(first_name,last_name,email,password):
 	'''
 	Function to create a new user
 	'''
 	new_user = User(first_name,last_name,email,password)
 	return new_user
 
-def save_user(user):
+def save_account(user):
 	'''
 	function to save a new user
 	'''
-	user.save_user()
+	user.save_account()
 
-def verify_user(first_name,password):
+def verify_account(first_name,password):
 	'''
 	Function that verifies the existance of the user before creating credentials
 	'''
@@ -103,7 +103,7 @@ def main():
 			print("Enter you password....")
 			password = input ()
 				
-			save_account(create_user(first_name,last_name,email,password))
+			save_account(create_account(first_name,last_name,email,password))
 			print('\n')
 			print(f"New User {first_name, last_name} account has been created")
 			print('\n')
@@ -121,14 +121,13 @@ def main():
 
 				print("Enter your password....")
 				password = input()
-				user_exists = verify_user(user_name,password)
-				if user_exists == user_name:
+				account_exists = verify_account(user_name,password)
+				if account_exists == user_name:
 				# while (username != "username" and password != "password")
 
 					print (" Sorry username and password incorrect please re-enter for validation ")
 					print("Enter your user name....")
 					user_name = input()
-					print('\n')
 
 					print("Enter your email....")
 					email = input()
@@ -137,7 +136,7 @@ def main():
 					password = input()
 
 				else:
-					print ("Greetings," , {username}, "you are now logged in now with your password")
+					print ("Greetings," , {user_name}, "you are now logged in now with your password")
 				
 					again = input("Do you want to try again ?(y/n):")
 					print("Use this short codes : su - sign up, dc - display your account, ex - exit the app")
