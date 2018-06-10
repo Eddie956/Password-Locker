@@ -24,20 +24,20 @@ class User:
 
 		User.user_list.append(self)
 		
-# class Credential:
-# 	credential_list = []
-# 	user_credential_list = []
+class Credential:
+	credential_list = []
+	user_credential_list = []
 
-# 	@classmethod
-# 	def check_user(cls,first_name,password):
-# 		'''
-# 		Method that checks if the name and password entered match entries in the users_list
-# 		'''
-# 		current_user = ''
-# 		for user in User.users_list:
-# 			if (user.first_name == first_name and user.password == password):
-# 				current_user = user.first_name
-# 		return current_user
+	@classmethod
+	def check_user(cls,first_name,password):
+		'''
+		Method that checks if the name and password entered match entries
+		'''
+		current_account = ''
+		for user in User.users_list:
+			if (user.first_name == first_name and user.password == password):
+				current_user = user.first_name
+		return current_user
 
 
 # 	def __init__(self,user_name,email, acc, password):
