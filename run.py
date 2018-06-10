@@ -21,12 +21,12 @@ def verify_user(first_name,password):
 	checking_user = Credential.check_user(first_name,password)
 	return checking_user
 
-# def generate_password():
-# 	'''
-# 	Function to generate a password automatically
-# 	'''
-# 	generate_password = Credential.generate_password()
-# 	return generate_password
+def generate_password():
+	'''
+	Function to generate a password automatically
+	'''
+	generate_password = Credential.generate_password()
+	return generate_password
 
 # from user import Credential
 
