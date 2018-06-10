@@ -40,13 +40,13 @@ class Credential:
 		return current_user
 
 
-# 	def __init__(self,user_name,email, acc, password):
-# 		self.user_name = user_name
-# 		self.email = email
-# 		self.password = password
+	def __init__(self,user_name,email, acc, password):
+		self.user_name = user_name
+		self.email = email
+		self.password = password
 
-# 	def save_credential(self):
-# 		Credential.credential_list.append(self)#function that saves the credential list
+	def save_credential(self):
+		Credential.credential_list.append(self)#function that saves the credential list
 
 # 	def generate_password():
 # 		generate_password=  "".join(choice(characters) for x in range(randint(8, 16)))
