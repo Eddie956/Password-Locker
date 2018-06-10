@@ -17,12 +17,12 @@ class User:
 		self.email = email
 		self.password = password
 
-# 	def save_account(self):
-# 		"""
-# 		save_user method saves user objects into user_list
-# 		"""
+	def save_account(self):
+		"""
+		save_user method saves user objects into user_list
+		"""
 
-# 		User.user_list.append(self)
+		User.user_list.append(self)
 		
 # class Credential:
 # 	credential_list = []
