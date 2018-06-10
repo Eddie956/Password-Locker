@@ -28,14 +28,14 @@ def generate_password():
 	generate_password = Credential.generate_password()
 	return generate_password
 
-# from user import Credential
+from user import Credential
 
-# def create_credential(user_name,email, acc, password):
-# 	'''
-# 	Function to create a new user
-# 	'''
-# 	new_credential = Credential(user_name,email,password)
-# 	return new_credential
+def create_credential(user_name,email, acc, password):
+	'''
+	Function to ḷogin existing user
+	'''
+	new_credential = Credential(user_name,email,password)
+	return new_credential
 
 # def save_credential(credential):
 # 	'''
