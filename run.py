@@ -8,11 +8,11 @@ def create_user(first_name,last_name,email,password):
 	new_user = User(first_name,last_name,email,password)
 	return new_user
 
-# def save_user(user):
-# 	'''
-# 	function to save a new user
-# 	'''
-# 	user.save_user()
+def save_user(user):
+	'''
+	function to save a new user
+	'''
+	user.save_user()
 
 # def verify_user(first_name,password):
 # 	'''
