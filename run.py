@@ -75,87 +75,87 @@ def copy_email():
 	return Credential.copy_email()
 
 
-# def main():
-# 	print("Hello welcome to my app. What is your name?")
-# 	user_name = input()
+def main():
+	print("Hello welcome to my app. What is your name?")
+	user_name = input()
 
-# 	print(f"Hello {user_name}. what would you like to do?")
-# 	print('\n')
+	print(f"Hello {user_name}. what would you like to do?")
+	print('\n')
 
-# 	while True:
-# 		print("Use this short codes : su - sign up, lg - login to your account, ex - exit the app")
+	while True:
+		print("Use this short codes : su - sign up, lg - login to your account, ex - exit the app")
 
-# 		short_code = input().lower()
+		short_code = input().lower()
 
-# 		if short_code == 'su':
-# 			print("New Account")
-# 			print("-"*10)
+		if short_code == 'su':
+			print("New Account")
+			print("-"*10)
 
-# 			print("Enter your first_name ....")
-# 			first_name = input()
+			print("Enter your first_name ....")
+			first_name = input()
 
-# 			print("Enter your last name....")
-# 			last_name = input()
+			print("Enter your last name....")
+			last_name = input()
 
-# 			print("Enter your email....")
-# 			email = input()
+			print("Enter your email....")
+			email = input()
 
-# 			print("Enter you password....")
-# 			password = input ()
+			print("Enter you password....")
+			password = input ()
 				
-# 			save_account(create_user(first_name,last_name,email,password))
-# 			print('\n')
-# 			print(f"New User {first_name, last_name} account has been created")
-# 			print('\n')
+			save_account(create_user(first_name,last_name,email,password))
+			print('\n')
+			print(f"New User {first_name, last_name} account has been created")
+			print('\n')
 
-# 		elif short_code == 'lg':
-# 				print("Please enter your details to login")
-# 				print("\n")
+		elif short_code == 'lg':
+				print("Please enter your details to login")
+				print("\n")
 
-# 				print("Enter your user name....")
-# 				user_name = input()
-# 				print('\n')
+				print("Enter your user name....")
+				user_name = input()
+				print('\n')
 
-# 				print("Enter your email....")
-# 				email = input()
+				print("Enter your email....")
+				email = input()
 
-# 				print("Enter your password....")
-# 				password = input()
-# 				user_exists = verify_user(user_name,password)
-# 				if user_exists == user_name:
-# 				# while (username != "username" and password != "password")
+				print("Enter your password....")
+				password = input()
+				user_exists = verify_user(user_name,password)
+				if user_exists == user_name:
+				# while (username != "username" and password != "password")
 
-# 					print (" Sorry username and password incorrect please re-enter for validation ")
-# 					print("Enter your user name....")
-# 					user_name = input()
-# 					print('\n')
+					print (" Sorry username and password incorrect please re-enter for validation ")
+					print("Enter your user name....")
+					user_name = input()
+					print('\n')
 
-# 					print("Enter your email....")
-# 					email = input()
+					print("Enter your email....")
+					email = input()
 
-# 					print("Enter your password....")
-# 					password = input()
+					print("Enter your password....")
+					password = input()
 
-# 				else:
-# 					print ("Greetings," , {username}, "you are now logged in now with your password")
+				else:
+					print ("Greetings," , {username}, "you are now logged in now with your password")
 				
-# 					again = input("Do you want to try again ?(y/n):")
-# 					print("Use this short codes : su - sign up, dc - display your account, ex - exit the app")
-# 					if again.lower() == 'n':
-# 						print('Goodbye')
-# 			# elif short_code == 'dc':
-# 			# 	print('\n')
+					again = input("Do you want to try again ?(y/n):")
+					print("Use this short codes : su - sign up, dc - display your account, ex - exit the app")
+					if again.lower() == 'n':
+						print('Goodbye')
+			# elif short_code == 'dc':
+			# 	print('\n')
 
 				
-# 		elif short_code == "ex":
-# 			print("Bye......")
-# 			break
+		elif short_code == "ex":
+			print("Bye......")
+			break
 
-# 		else:
-# 			print("Ireally didn't get that. Please use the short codes")
-
-
+		else:
+			print("Ireally didn't get that. Please use the short codes")
 
 
-# if __name__ == '__main__':
-#     main()
+
+
+if __name__ == '__main__':
+    main()
