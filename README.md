@@ -48,7 +48,7 @@ This password locker contains different sections such:
 	
 	* Python3.6
 
-## Known Bugs
+## Known Bugsatu
 
 	* How to generate a password
 
