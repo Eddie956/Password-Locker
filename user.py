@@ -43,6 +43,7 @@ class Credential:
 	def __init__(self,user_name,email, acc, password):
 		self.user_name = user_name
 		self.email = email
+		self.acc = acc
 		self.password = password
 
 	def save_credential(self):

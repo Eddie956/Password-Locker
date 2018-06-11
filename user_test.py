@@ -17,16 +17,16 @@ class TestUser(unittest.TestCase):
 		"""
 		test_init testcase to test if the object is initialized properly
 		"""
-		self.assertEqual(self.new_user.first_name,"Eddie")
-		self.assertEqual(self.new_user.last_name,"Mutugi")
-		self.assertEqual(self.new_user.email,"mutugieddie3@gmail.com")
-		self.assertEqual(self.new_user.password,"mango")
+		self.assertEqual(self.new_account.first_name,"Eddie")
+		self.assertEqual(self.new_account.last_name,"Mutugi")
+		self.assertEqual(self.new_account.email,"mutugieddie3@gmail.com")
+		self.assertEqual(self.new_account.password,"mango")
 
 	def test_save_account(self):
 		"""
 		test_save_user test case to test if the user object is saved into the user list
 		"""
-		self.new_user.save_account()#saving the new user
+		self.new_account.save_account()#saving the new user
 		self.assertEqual(len(User.user_list),1)
 
 class TestCredential(unittest.TestCase):
@@ -67,7 +67,7 @@ class TestCredential(unittest.TestCase):
 		test to check if we can save multiple credentials
 		"""
 		# self.new_credential.save_credential()
-		test_credential = Credential("Arijm", "mutugieddie3@gmail.com", "mango")#new credential
+		test_credential = Credential("Arijm", "mutugieddie3@gmail.com" , "instagram", "mango")#new credential
 		self.assertEqual(len(Credential.credential_list),0)
 
 	def test_delete_credential(self):
@@ -75,7 +75,7 @@ class TestCredential(unittest.TestCase):
 		test if one can remove a user from credential list
 		"""
 		self.new_credential.delete_credential()
-		test_credential = Credential("Arijm", "mutugieddie3@gmail.com", "mango")#new credential
+		test_credential = Credential("Arijm", "mutugieddie3@gmail.com", "instagram", "mango")#new credential
 		test_credential.delete_credential()
 		self.new_credential.delete_credential()
 		self.assertEqual(len(Credential.credential_list),3)
@@ -92,7 +92,7 @@ class TestCredential(unittest.TestCase):
 		test to check if we can find a user by his name
 		"""
 		self.new_credential.save_credential()
-		test_credential = Credential("Arijm", "mutugieddie3@gmail.com", "instagram" "mango")#new credential
+		test_credential = Credential("Arijm", "mutugieddie3@gmail.com", "instagram", "mango")#new credential
 		test_credential.save_credential()
 		found_credential = Credential.find_by_user_name("Arijm")
 		self.assertEqual(found_credential.user_name,test_credential.user_name)
@@ -102,7 +102,7 @@ class TestCredential(unittest.TestCase):
 		testing if we can return a Boolean if the credential is not found
 		"""
 		self.new_credential.save_credential()
-		test_credential = Credential("Arijm", "mutugieddie3@gmail.com", "mango")#new credential
+		test_credential = Credential("Arijm", "mutugieddie3@gmail.com" , "instagram", "mango")#new credential
 		test_credential.save_credential()
 		credential_exists = Credential.credential_exists("Arijm")
 		self.assertTrue(credential_exists)
