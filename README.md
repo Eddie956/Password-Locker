@@ -37,29 +37,29 @@ This password locker contains different sections such:
 
 ## Running password locker
 	 
-  $ python3.6 run.py / 
-  $ ./run.py
+ 	 $ python3.6 run.py / 
+	 $ ./run.py
 
 ## Running Test
  
- $ python3.6 user_test.py
+ 	$ python3.6 user_test.py
 
 ## Technology Used
 	
 	* Python3.6
 
-## Known Bugsatu
+## Known Bugs
 
 	* How to generate a password
 
 ## Support and contact details
 
-	* For any compliment contact.
+* For any compliment contact.
 
-	* No. 0725463583
+* No. 0725463583
 
-	* email: muugieddie3@gmail.com
+* email: muugieddie3@gmail.com
 ## Licence
 
-	* MIT
+* MIT
 
