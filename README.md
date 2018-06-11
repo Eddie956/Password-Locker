@@ -51,11 +51,11 @@ This password locker contains different sections such:
 
 ## Technology Used
 	
-	* Python3.6
+* Python3.6
 
 ## Known Bugs
 
-	* How to generate a password
+* How to generate a password
 
 ## Versioning
 
