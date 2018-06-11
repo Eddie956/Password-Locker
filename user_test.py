@@ -80,12 +80,6 @@ class TestCredential(unittest.TestCase):
 		self.new_credential.delete_credential()
 		self.assertEqual(len(Credential.credential_list),3)
 
-	def delete_credential(self):
-		"""
-		this is a method to delete credential from the credential_list.
-		"""
-		Credential.credential_list.remove(self)
-
 
 	def test_find_credential_by_username(self):
 		"""
