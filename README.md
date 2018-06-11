@@ -16,7 +16,7 @@ This password locker contains different sections such:
 
 ## Installing
 
-    Install Python3.6
+### Install Python3.6
 
     $ sudo add-apt-repository ppa:jonathonf/python-3.6
 	$ sudo apt-get update
@@ -31,35 +31,49 @@ This password locker contains different sections such:
 	>>>
 
 
- 	Install Pyperclip Module
+ ### Install Pyperclip Module
 
 	$ python3.6 -m pip install pyperclip
 
+## How to get the app
+
+	$ cd Document
+	$ git clone https://github.com/Eddie956/Password-Locker/
+	$ cd Password-Locker
 ## Running password locker
 	 
-  $ python3.6 run.py / 
-  $ ./run.py
+ 	 $ python3.6 run.py / 
+	 $ ./run.py
 
 ## Running Test
  
- $ python3.6 user_test.py
+ 	$ python3.6 user_test.py
 
 ## Technology Used
 	
-	* Python3.6
+* Python3.6
 
-## Known Bugsatu
+## Known Bugs
 
-	* How to generate a password
+* How to generate a password
+
+## Versioning
+
+* 8/05/2018
+
+## Author
+
+* Eddie Mutugi
+
+## Licence
+
+* MIT
 
 ## Support and contact details
 
-	* For any compliment contact.
+* For any compliment contact.
 
-	* No. 0725463583
+* No. 0725463583
 
-	* email: muugieddie3@gmail.com
-## Licence
-
-	* MIT
+* email: muugieddie3@gmail.com
 
